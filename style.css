@@ -1,3 +1,4 @@
+
 body{
     font-family: monospace, Poppins;
     overflow-x: hidden;
@@ -151,9 +152,9 @@ header .totalQuantity{
     padding: 20px;
     overflow: auto;
 }
-/* .cart .listCart::-webkit-scrollbar{
+.cart .listCart::-webkit-scrollbar{
     width: 0;
-} */
+}
 
 .cart .buttons{
     display: grid;
@@ -340,4 +341,73 @@ header .totalQuantity{
 }
 .pay .submit_btn:hover{
     background: blue;
+}
+
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        
+    }
+    .cart.show-cart {
+        right: 0;
+    }
+
+    .listProduct {
+        grid-template-columns: 1fr;
+        
+    }
+
+    .listProduct .item h2,
+    .listProduct .item .price {
+        padding: 0 20px;
+        text-align: center;
+    }
+    .listProduct .item button {
+        width: 80%;
+        padding: 15px 0;
+    }
+    .returnCart a p{
+        font-size: 15px;
+        transition: 0.1s;
+        font-weight: 500;
+        width: 600px;
+    }
+
+    .cart {
+        width: 100%;
+        height: 600px;
+        
+    }
+
+    .checkoutLayout {
+        grid-template-columns: 1fr;
+    }
+    .checkoutLayout .right {
+        border-radius: 0;
+    }
+
+
+    .checkoutLayout .form h1,
+    .checkoutLayout .form .group:nth-child(-n+3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .pay .col {
+        width: 90%;
+    }
+    .pay .col .inputBox input,
+    .pay .col .inputBox select option {
+        width: 90%;
+    }
+    .pay .col a p{
+        font-size: 14px;
+    }
+
+    .pay .col .inputBox img {
+        width: 100%;
+    }
 }
